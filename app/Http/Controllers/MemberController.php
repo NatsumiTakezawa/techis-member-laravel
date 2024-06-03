@@ -13,10 +13,10 @@ class MemberController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function top(Request $request)
+    public function index(Request $request)
     {
         $members = Member::orderBy('created_at' , 'asc')->get();
-        return view('members.top' , [
+        return view('members.index' , [
             'members' => $members,
         ]);
     }
@@ -24,9 +24,9 @@ class MemberController extends Controller
 
     //会員登録画面表示
 
-    public function register()
+    public function create()
     {
-        return view('members.register');
+        return view('members.create');
     }
 
 
@@ -35,7 +35,7 @@ class MemberController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function postRegister(Request $request)
+    public function store(Request $request)
     {
         // バリデーション
         $this->validate($request,[
@@ -57,7 +57,7 @@ class MemberController extends Controller
 
 
                 // リダイレクト
-                return redirect()->route('members.top');
+                return redirect()->route('members.index');
                          
     }
 
@@ -81,7 +81,7 @@ class MemberController extends Controller
      * @return Response
      */
 
-    public function postEdit(Request $request )
+    public function update(Request $request )
     {
        $id = $request->id;
         // バリデーション
@@ -106,7 +106,7 @@ class MemberController extends Controller
                     // 保存
                     // $member->save();
                     // リダイレクト
-                    return redirect()->route('members.top');
+                    return redirect()->route('members.index');
                              
         }
 
@@ -127,7 +127,7 @@ class MemberController extends Controller
         $id = $request->id;
         $member = Member::find($id);
         $member->delete();
-        return redirect()->route('members.top');
+        return redirect()->route('members.index');
     }
 
     

@@ -10,7 +10,7 @@
 
       <!-- 会員登録画面   -->
       <h1>会員登録</h1>
-      <form class="" action="{{ route('members.top') }}" method="post">
+      <form class="" action="{{ route('members.index') }}" method="post">
         {{ csrf_field() }}
         <input type="text" id="name" name="name" placeholder="名前" size="30"><span>{{ $errors->first('name') }}</span><br />
         <input type="text" id="phone" name="phone" placeholder="電話番号" size="30"><span>{{ $errors->first('phone') }}</span><br />

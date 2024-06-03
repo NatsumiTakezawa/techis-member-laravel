@@ -7,7 +7,7 @@
     
 </head>
 <body>
-<a href="{{ route('members.register') }}"> >>登録 </a>
+<a href="{{ route('members.create') }}"> >>登録 </a>
 <table border="1" style="border-collapse: collapse">
   <thead>
     <tr>
