@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSSを当てたいときはビートで書く。その後ターミナルでnpm run dev を入力 -->
+    <!-- CSSを当てたいときはビートで書く。その後ターミナルでnpm run dev を入力すると自動で同期してくれる -->
     @vite(['resources/css/app.css'])
     <title>会員一覧画面</title>
     
 </head>
-<body class="container">
-  <div>
+<body>
+<div class="index-container">
+  <div class="header">
 <a href="{{ route('members.create') }}" class="create-link"> >>登録 </a>
+  </div>
 <table border="1" style="border-collapse: collapse" class="user-table">
   <thead>
     <tr>

@@ -1,31 +1,35 @@
 /* styles.css */
 
 /* 会員一覧画面 */
-.container {
-    font-family: Arial, sans-serif;
+
+body {
+
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
+.index-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.header {
+    text-align: right;
+    margin-bottom: 10px;
+}
 
 .create-link {
-    display: inline-block;
-    position: absolute;
-    top: 140px;
-    right: 470px;
-    margin-bottom: 7px;
-    font-weight: bold;
-    text-decoration: none;
+
     color: #000000;
 }
-
-
-
 
 .user-table {
     width: 100%;
@@ -33,18 +37,70 @@
 }
 
 .user-table th, .user-table td {
-    border: 1px solid #000000;
+    border: 1.5px solid #000000;
     padding: 8px;
-    text-align: left;
-}
-
-.user-table th {
-    background-color: #f2f2f2;
     text-align: center;
 }
 
+.user-table th {
+    background-color: #ffffff;
+}
+
+.user-table td {
+    text-align: left;
+}
+
 .edit-link {
-    text-decoration: none;
     color: #000000;
+    text-align: center;
+}
+
+
+
+
+/* 編集画面 */
+
+
+.create-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #000000;
+    background-color: #e0e0e0;
+    cursor: pointer;
     font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #d5d5d5;
 }
