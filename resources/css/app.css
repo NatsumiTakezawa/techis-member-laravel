@@ -29,6 +29,7 @@ body {
 .create-link {
 
     color: #000000;
+    margin-right: 20px;
 }
 
 .user-table {
@@ -58,7 +59,7 @@ body {
 
 
 
-/* 編集画面 */
+/* 編集登録画面（共通） */
 
 
 .create-container {
