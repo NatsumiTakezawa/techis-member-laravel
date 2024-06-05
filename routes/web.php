@@ -26,6 +26,7 @@ Route::post('/members/index', [App\Http\Controllers\MemberController::class, 'st
 
 
 // 編集画面のルーティング。post通信ではrequestからidを受け取るので{id}の指定はいらないedit.bladeの17行目name=idから値をとってこれる.url(左側)だと{id}をつけていいが、route nameのところ（右側）には通常{id}をつけてはだめ
+// hidden
 Route::get('/members/edit/{id}' , [App\Http\Controllers\MemberController::class, 'edit'])->name('members.edit');
 Route::post('/members/update' , [App\Http\Controllers\MemberController::class, 'update'])->name('members.update');
 

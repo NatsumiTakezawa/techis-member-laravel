@@ -28,7 +28,7 @@
       <td>{{ $member->name }}</td>
       <td>{{ $member->phone }}</td>
       <td>{{ $member->email }}</td>
-      <td><a href="{{ route('members.edit', ['id' => $member->id]) }}" class="edit-link"> >>編集 </a></td>
+      <td id="edit-link"><a href="{{ route('members.edit', ['id' => $member->id]) }}" > >>編集 </a></td>
       <!-- <td> >>編集 ({{ route('members.edit', ['id' => $member->id]) }})</td> -->
     </tr>
     @endforeach
